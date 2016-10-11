@@ -35,7 +35,7 @@ therefore if the NPC shrieks at the beginning, for the rest of the way it will n
 all your Actions in a group don't have to complete at the same time.
 
 #Actions
-ActionCall     -> Function Call (One Frame Logic)
-ActionRoutine  -> Coroutine Call (Multiple Frame Logic)
-ActionDelay    -> Wait For X Seconds
-ActionProperty -> Lerp Of A Value 
+* ActionCall     -> Function Call (One Frame Logic)
+* ActionRoutine  -> Coroutine Call (Multiple Frame Logic)
+* ActionDelay    -> Wait For X Seconds
+* ActionProperty -> Lerp Of A Value 
