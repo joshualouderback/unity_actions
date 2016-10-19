@@ -110,7 +110,9 @@ public abstract class Action
 	public virtual void Cancel()
 	{
 		if(routine_ != null && parent_ != null)
-			parent_.GetTarget().StopCoroutine(routine_);
+		{
+ 			parent_.GetTarget().StopCoroutine(routine_);
+		}
 	}
 }
 

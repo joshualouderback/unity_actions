@@ -95,14 +95,6 @@ public class ActionSequence : ActionManager
 			// Remove the rest
 			sequence.Clear();
 		}
-
-		// If we have a routine
-		if(routine_ != null)
-	   	{
-			// Stop it
-			target_.StopCoroutine(routine_);
-			routine_ = null;
-		}
 	}
 
 	// Coroutine for updating sequences
@@ -130,9 +122,12 @@ public class ActionSequence : ActionManager
 				else
 					yield return null;
 			}
-			
-			// Remove the current action
-			sequence.Dequeue();
+				
+			if(sequence.Count > 0)
+			{
+				// Remove the current action
+				sequence.Dequeue();
+			}
 		}
 
 		// Complete, break yielding

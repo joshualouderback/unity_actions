@@ -34,9 +34,6 @@ public class ActionRoutine : Action
 		// Cancel the routine we started
 		if(parent_ != null && actionRoutine_ != null)
 			parent_.GetTarget().StopCoroutine(actionRoutine_);
-
-		// Then call our base class to cancel ourselves
-		base.Cancel();
 	}
 
 	// Update is called once per frame
@@ -50,9 +47,7 @@ public class ActionRoutine : Action
 		{
 			yield return null;
 		}
-
-
-
+			
 		// Wait until we return from the function
 		actionRoutine_ = parent_.GetTarget().StartCoroutine(function_());
 		yield return actionRoutine_;
